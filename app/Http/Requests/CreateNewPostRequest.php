@@ -2,6 +2,8 @@
 
 namespace App\Http\Requests;
 
+use Auth;
+use App\Post;
 use Illuminate\Foundation\Http\FormRequest;
 
 class CreateNewPostRequest extends FormRequest
@@ -26,5 +28,18 @@ class CreateNewPostRequest extends FormRequest
     return [
       'message' => 'required|min:10'
     ];
+  }
+
+  /**
+   * Add post (message)
+   *
+   * @return Post
+   */
+  public function addPost() : Post
+  {
+    return Post::add([
+      'user_id' => Auth::id(),
+      'body' => $this->message
+    ]);
   }
 }
