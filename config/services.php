@@ -44,4 +44,8 @@ return [
     ],
   ],
 
+  'gravatar' => [
+    'url' => "https://www.gravatar.com/avatar/"
+  ]
+
 ];
