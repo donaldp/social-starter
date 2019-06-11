@@ -36,4 +36,19 @@ class PostController extends Controller
                 ->limit(4)
                 ->get();
   }
+
+  /**
+   * Get older posts (messages)
+   *
+   * @param Request $request
+   * @return \Illuminate\Database\Eloquent\Collection
+   */
+  public function getOlder(Request $request) : Collection
+  {
+    return Post::with('user')
+                ->orderBy('id', 'desc')
+                ->where('id', '<', $request->id)
+                ->take(4)
+                ->get();
+  }
 }
