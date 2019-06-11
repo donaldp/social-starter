@@ -11,10 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-  return view('welcome');
+Route::middleware('auth')->group(function() {
+
+  Route::get('/', 'HomeController@index');
+
+  // Posts
+  Route::post('/post/add', 'PostController@create');
+  Route::get('/post/all', 'PostController@all');
+  Route::get('/post/fetch', 'PostController@getOlder');
+
 });
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
