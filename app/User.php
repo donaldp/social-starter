@@ -46,6 +46,17 @@ class User extends Authenticatable
   ];
 
   /**
+   * Load all posts that belong to the user
+   *
+   * @return Illuminate\Database\Eloquent\Relations\HasMany
+   */
+  public function posts()
+  {
+    return $this->hasMany(Post::class);
+  }
+
+
+  /**
    * Get gravatar link
    *
    * @return string
