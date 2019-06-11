@@ -42,7 +42,7 @@ php artisan serve
 Libraries used
 --------------
 * [axios](https://www.npmjs.com/package/axios)
-* [vue moment ago](https://www.npmjs.com/package/vue-moments-ago)
+* [vue-moment-ago](https://www.npmjs.com/package/vue-moments-ago)
 * [animate.css](https://daneden.github.io/animate.css/)
 * [axios-progress-bar](https://www.npmjs.com/package/axios-progress-bar)
 * [vue-sequential-entrance](https://github.com/deivthings/vue-sequential-entrance)
