@@ -108,7 +108,7 @@
           });
       },
       /**
-       * Auto load new artists whenever the scroll reaches the end of the page.
+       * Auto load new posts whenever the scroll reaches the end of the page.
        *
        * @param Event e
        */
