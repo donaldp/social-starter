@@ -6,6 +6,7 @@ use App\Post;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use App\Http\Requests\CreateNewPostRequest;
+use Illuminate\Database\Eloquent\Collection;
 
 class PostController extends Controller
 {
@@ -21,5 +22,18 @@ class PostController extends Controller
       'status' => 'success',
       'post' => Post::with('user')->where('id', $request->addPost()->id)->first()
     ]);
+  }
+
+  /**
+   * Get all posts
+   *
+   * @return \Illuminate\Database\Eloquent\Collection
+   */
+  public function all() : Collection
+  {
+    return Post::with('user')
+                ->orderBy('id', 'desc')
+                ->limit(4)
+                ->get();
   }
 }
