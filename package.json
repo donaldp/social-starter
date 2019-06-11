@@ -21,5 +21,12 @@
         "sass": "^1.15.2",
         "sass-loader": "^7.1.0",
         "vue": "^2.5.17"
+    },
+    "dependencies": {
+        "animate.css": "^3.7.2",
+        "axios-progress-bar": "^1.2.0",
+        "vue-moments-ago": "^0.2.0",
+        "vue-sequential-entrance": "^1.1.3",
+        "vue-template-compiler": "^2.6.10"
     }
 }
